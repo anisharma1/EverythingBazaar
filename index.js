@@ -7,6 +7,8 @@ const dotenv = require("dotenv").config();
 const authRouter = require("./routes/authRoute");
 const productRouter = require("./routes/productRoute");
 const blogRouter = require("./routes/blogRoute");
+const prodCategoryRouter = require("./routes/prodCategoryRoute");
+
 const morgan = require("morgan");
 const { notFound, errorHandler } = require("./middleware/errorHandler");
 
@@ -22,6 +24,7 @@ app.use(morgan("dev"));
 app.use("/api/user", authRouter);
 app.use("/api/product", productRouter);
 app.use("/api/blog", blogRouter);
+app.use("/api/prodCategory", prodCategoryRouter);
 
 app.use(notFound);
 app.use(errorHandler);
