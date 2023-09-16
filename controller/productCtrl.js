@@ -113,7 +113,7 @@ const getAllProducts = asyncHandler(async (req, res) => {
 	}
 });
 
-//wishlist functionality
+//wishlist functionality - create, update, delete
 const addToWishlist = asyncHandler(async (req, res) => {
 	const { _id } = req.user;
 	const { prodId } = req.body;
@@ -148,6 +148,7 @@ const addToWishlist = asyncHandler(async (req, res) => {
 	}
 });
 
+//rating functionality - create, update, delete
 const rating = asyncHandler(async (req, res) => {
 	const { _id } = req.user;
 	const { star, prodId, comment } = req.body;
